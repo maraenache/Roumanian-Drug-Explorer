@@ -1,0 +1,551 @@
+/**stilurile sunt aplicate implicit și se folosesc pentru a asigura un aspect consistent pentru site */
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	text-decoration: none;
+	list-style: none;
+	font-weight: normal;
+	vertical-align: baseline;
+	box-sizing: border-box;
+}
+
+
+
+ol,
+ul {
+	list-style: none;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	background: #f3f6fa;
+}
+
+body {
+	color: #7c8081;
+	font-family: 'Lato', sans-serif;
+	font-size: 15pt;
+	font-weight: 300;
+	letter-spacing: 0.025em;
+	line-height: 1.75em;
+}
+
+/** elementele de tip "a", adica pentru link-uri. */
+a {
+	color: #3fb1a3;
+	text-decoration: none;
+	border-bottom: dotted 1px;
+}
+
+a:hover {
+	border-bottom-color: transparent;
+}
+
+strong {
+	font-weight: 400;
+}
+
+/** elementele de tip "p" (paragrafe), "ul" (listă neordonată), 
+"ol" (listă ordonată) și "blockquote" (bloc de citat).*/
+p,ul,
+ol,
+blockquote {
+	margin: 0 0 2em 0;
+}
+
+/**  "h1" (titlu nivel 1), "h2" (titlu nivel 2), "h3" (titlu nivel 3)*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: inherit;
+	/* inherit - adica va folosi culoarea mostenita de la elementul parinte*/
+	font-weight: 300;
+	line-height: 1.75em;
+	margin-bottom: 1em;
+	text-transform: uppercase;
+}
+
+/** elementele "a" (link-uri) din interiorul elementelor de tip "h1", "h2", "h3", "h4", "h5" si "h6*/
+h1 a,h2 a,h3 a,h4 a,
+h5 a,
+h6 a {
+	color: inherit;
+	text-decoration: none;
+	border: 0;
+}
+h1 {
+	font-size: 1.5em;
+	letter-spacing: 0.1em;
+}
+h3 {
+	font-size: 1.15em;
+	letter-spacing: 0.025em;
+}
+
+/** hr-linie orizonatala */
+hr {
+	border-top: solid 1px rgba(124, 128, 129, 0.2);
+	border: 0;
+	margin-bottom: 1.5em;
+}
+
+/** pentru textele de tip citat-> vor fi scrise cu italic*/
+blockquote {
+	border-left: solid 0.5em rgba(124, 128, 129, 0.2);
+	font-style: italic;
+	padding: 1em 0 1em 2em;
+}
+
+
+/* Container */
+/** clasa container->incadrare continut in pagina web*/
+.container {
+	margin: 0 auto;
+	/** elementul va fi centrat */
+	max-width: 100%;
+	width: 1400px;
+}
+
+/** in functie de marimea ecranului modificam dimensiunile din container */
+@media screen and (max-width: 736px) {
+
+	.container {
+		width: 90%;
+	}
+
+}
+
+@media screen and (max-width: 1800px) {
+
+	.container {
+		width: 95%;
+	}
+}
+
+/* Row */
+
+.row {
+	display: flex;
+	/**  elementele copil sa se aseze pe o singura linie */
+	flex-wrap: wrap;
+	/** ele sunt aranjate pe mai multe linii daca depasesc latimea disponibila*/
+	box-sizing: border-box;
+	align-items: stretch;
+}
+
+/** instructiuni pt alinierea unor elemente de tip row*/
+.row.aln-top {
+	align-items: flex-start;
+}
+
+.row.aln-middle {
+	align-items: center;
+}
+
+.row.aln-bottom {
+	align-items: flex-end;
+}
+
+.wrapper .row {
+	justify-content: center;
+}
+
+.row>.imp {
+	/* elementul cu clasa .imp va fi plasat înaintea celorlalte elemente, chiar dacă nu apare primul în cod.*/
+	order: -1;
+}
+
+.row>.col-4 {
+	width: 33.33333%;
+	min-width: 300px;
+
+}
+
+.row>.col-8 {
+	width: 66.66667%;
+}
+
+.row>.col-12 {
+	width: 100%;
+}
+
+.row>.col-6 {
+	width: 50%;
+}
+
+.row>.col-3-pe-linie {
+	width: 30%;
+	min-width: 300px;
+}
+
+.row {
+	margin-top: -50px;
+	margin-left: -50px;
+}
+
+.row>* {
+	padding: 25px 25px 25px 25px;
+}
+
+@media screen and (max-width: 736px) {
+	/** pentru ecrane cu latime maxima de 736 pixeli, setari pentru randuri si copiii elementelor de tip rand */
+
+	.row {
+		display: flex;
+		flex-wrap: wrap;
+		box-sizing: border-box;
+		align-items: stretch;
+	}
+
+	.row>* {
+		box-sizing: border-box;
+	}
+
+	.row.aln-left {
+		justify-content: flex-start;
+	}
+
+	.row.aln-center {
+		justify-content: center;
+	}
+
+	.row.aln-right {
+		justify-content: flex-end;
+	}
+
+	.row.aln-top {
+		align-items: flex-start;
+	}
+
+	.row.aln-middle {
+		align-items: center;
+	}
+
+	.row.aln-bottom {
+		align-items: flex-end;
+	}
+}
+
+
+/* Section/Article */
+
+section.special,
+article.special {
+	/** setari pentru sectiuni si articole cu clasa special in ele */
+	text-align: center;
+}
+
+header.major {
+	/** setari pentru headere cu clasa major */
+	padding-bottom: 2em;
+}
+
+
+
+/* Image */
+.image {
+	border: 0;
+	position: relative;
+}
+
+.image.contact {
+	margin: 20%;
+	height: 300px;
+	width: 270px;
+
+}
+#myVideo {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+  }
+
+.imgdrugs {
+	border: 1px solid #000000;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 100px;
+	background-image: url(https://live.staticflickr.com/65535/52986453635_7a6e3f6156_c.jpg);
+}
+
+.imgfundal {
+	background-image: url("https://live.staticflickr.com/65535/52986542873_920aea79a1_z.jpg");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	padding: 6em 0;
+	color: #fff;
+	text-align: center;
+}
+
+.image.featured {
+	display: block;
+	margin: 0 0 2em 0;
+	object-fit: cover;
+
+}
+
+.image.featured img {
+	display: block;
+	width: 100%;
+	object-fit: contain;
+}
+
+/* List */
+
+ul {
+	list-style: disc;
+	padding-left: 1em;
+}
+
+ul li {
+	padding-left: 0.5em;
+}
+
+
+/* pt butoane */
+.buttons {
+	list-style: none;
+	display: inline-block;
+}
+
+.button {
+	background: none;
+	border: solid 1px;
+	border-radius: 0;
+	color: inherit;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 0.8em;
+	font-weight: 900;
+	letter-spacing: 2px;
+	min-width: 18em;
+	padding: 0 0.75em;
+	line-height: 3.75em;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+button:hover,
+.button:hover {
+	background: rgba(188, 202, 206, 0.15);
+	border-color: inherit;
+}
+
+.button.fit {
+	width: 100%;
+}
+
+/* cele 3 butoane de la statistici sunt de tip small*/
+.button.small {
+	background-color: rgb(111, 181, 239);
+	color: white;
+	font-size: 0.7em;
+	min-width: 14em;
+	padding: 0.5em 0;
+}
+
+.button.small:hover {
+	background-color: rgb(111, 181, 239);
+	background: rgba(17, 17, 17, 0.15);
+	font-size: 0.7em;
+	min-width: 14em;
+	padding: 0.5em 0;
+}
+
+/* Wrapper */
+
+.wrapper {
+	margin-bottom: 5em;
+	padding: 5em;
+}
+
+/*poza despre droguri-chenar*/
+.wrapper.style2 {
+	background-color: #532121;
+	padding: 0;
+	margin-bottom: 0;
+	background-position: bottom left, bottom right;
+	background-repeat: no-repeat;
+	color: #fff;
+}
+
+
+
+/* Header */
+
+
+
+
+*{
+
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+
+
+/* 
+	 aici e imaginea de pe fundalul mare pagina principala
+	 */
+#banner .inner header {
+	display: inline-block;
+	border-bottom: solid 2px;
+	border-top: solid 2px;
+	margin: 0 0 2em 0;
+	padding: 3px 0 3px 0;
+}
+#text {
+	font-size: 1.5em;
+	letter-spacing: 0.1em;
+	border-bottom: solid 2px;
+	border-top: solid 2px;
+	font-size: 2.5em;
+	font-weight: 900;
+	text-align: center;
+	margin-left: 25%;
+	margin-top: 8%;
+	position: absolute;
+	color: white;
+	text-transform: uppercase;
+}
+#banner .inner header h1 {
+	border-bottom: solid 2px;
+	border-top: solid 2px;
+	font-size: 2.5em;
+	font-weight: 900;
+	letter-spacing: 0.2em;
+	margin: 0;
+	padding-left: 0.05em;
+	position: relative;
+	text-transform: uppercase;
+}
+
+#banner .inner p {
+	letter-spacing: 0.1em;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+#banner .inner p a {
+	color: inherit;
+	font-weight: 400;
+	text-decoration: none;
+}
+
+/* Main */
+
+#main {
+	padding: 7em 0;
+}
+
+@media screen and (max-width: 840px) {
+	#more {
+		margin: 10px;
+		padding: 30px;
+	}
+
+	.row {
+		margin-top: 0px;
+		margin-left: 0px;
+	}
+
+
+	.wrapper .row {
+		padding: 0;
+		flex-wrap: wrap;
+	}
+
+	.row>.col-6 {
+		width: 100%;
+		padding: 0;
+	}
+
+	html,
+	body {
+		overflow-x: hidden;
+	}
+	header.major {
+		padding-bottom: 0.25em;
+	}
+
+	header.special {
+		margin-bottom: 4em;
+		padding-top: 5em;
+	}
+
+	/* Section/Article */
+
+	section {
+		margin: 1em 0 1em 0;
+	}
+
+	section:first-child {
+		margin-top: 0;
+	}
+
+	/* Button */
+
+	button.small,
+	.button.small {
+		font-size: 0.8em;
+		min-width: 18em;
+		padding: 0.75em 0;
+	}
+
+	/* Buttons */
+
+	ul.buttons li {
+		display: block;
+		padding: 1em 0 0 0;
+	}
+
+	/* Header */
+
+	#header {
+		display: none;
+	}
+
+	/* Banner */
+
+	#banner {
+		margin: 0;
+	}
+
+	/* Wrapper */
+
+	.wrapper.special-alt {
+		text-align: center;
+	}
+
+	/* Main */
+	#main {
+		padding: 5em 0;
+	}
+	/* Footer */
+
+	#footer {
+		padding: 4em 1.5em;
+	}
+}

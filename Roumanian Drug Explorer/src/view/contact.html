@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <title>Pagina Contact</title>
+  <link rel="icon" href="https://live.staticflickr.com/65535/52986222269_59904cf210_n.jpg" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,700&family=Poppins:wght@100;200;400;500;600;800;900&family=Roboto+Slab:wght@100;200;300;400;600;900&family=Tilt+Neon&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
+  <style>
+    body {
+      background-color: #b0c4de;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="http://localhost:3000/pag_princ">
+      <img id="logo" src="/images/pill_logo-removebg-preview.png" alt="Logo" />
+    </a>
+    <div class="nav-links" id="nav-links">
+      <i class="fa fa-close" onclick="hideMenu()"></i>
+      <ul>
+        <li>
+          <a class="active" href="http://localhost:3000/pag_princ">HOME</a>
+        </li>
+        <li>
+          <label for="chart-select">STATISTICI</label>
+          <select id="chart-select">
+            <option value="http://localhost:3000/ptPie">Pie charts</option>
+            <option value="http://localhost:3000/barCharts">Bar charts</option>
+            <option value="http://localhost:3000/ptMulti">Multiple bar charts</option>
+            <option value="http://localhost:3000/pt2022">2022 charts</option>
+          </select>
+        </li>
+        <li class="current">
+          <a style="font-weight: bold" href="http://localhost:3000/contact">CONTACT</a>
+        </li>
+        <li class="current">
+          <a href="http://localhost:3000/login">LOGOUT</a>
+        </li>
+      </ul>
+    </div>
+    <i class="fa fa-bars" onclick="showMenu()"></i>
+  </nav>
+
+  <section class="descriere">
+    <h1>Echipa noastra</h1>
+    <p>Acest proiect a fost realizat de Enache Mara, Mihai Nicoleta și Sandu Smaranda.</p>
+
+    <div class="row">
+      <div class="descriere-col">
+        <img src="/images/mara.png" alt="Enache Mara" />
+        <div class="layer">
+          <h3>ENACHE MARA</h3>
+        </div>
+      </div>
+      <div class="descriere-col">
+        <img src="/images/nico2.jpg" alt="Mihai Nicoleta" />
+        <div class="layer">
+          <h3>MIHAI NICOLETA</h3>
+        </div>
+      </div>
+      <div class="descriere-col">
+        <img src="/images/smara.jpg" alt="Sandu Smaranda" />
+        <div class="layer">
+          <h3>SANDU SMARANDA</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/menu.js"></script>
+  <script src="js/pagPrinc.js"></script>
+</body>
+</html>

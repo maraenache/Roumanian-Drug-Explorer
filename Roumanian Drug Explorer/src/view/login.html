@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login Page in HTML with CSS Code Example</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/stil.css" />
+</head>
+<body>
+  <div class="box-form">
+    <div class="left">
+      <div class="overlay">
+        <h1>Bine ați venit!</h1>
+        <p>
+          Cu Romanian Drug Explorer, utilizatorii au acces la un
+          instrument interactiv si informativ care contribuie la o mai buna
+          intelegere a consumului de droguri in Romania si faciliteaza
+          luarea de masuri eficiente pentru reducerea impactului negativ
+          al drogurilor asupra societatii.
+        </p>
+      </div>
+    </div>
+
+    <div class="right">
+      <h5>Autentificare</h5>
+      <p>
+        Nu ai un cont inca? <a href="http://localhost:3000/register">Creeaza aici</a>
+      </p>
+      <form action="/login" method="POST">
+        <input type="text" name="username" placeholder="Nume de utilizator" required />
+        <input type="password" name="password" placeholder="Parolă" required />
+        <button type="submit">Autentificare</button>
+      </form>
+
+      <br /><br />
+
+      <div class="remember-me--forget-password">
+        <p>ai uitat parola?</p>
+        <!-- Adaugă formularul de resetare a parolei -->
+        <form action="/reset-password" method="POST">
+          <input type="email" name="email" placeholder="Adresa de email" required />
+          <button type="submit">Resetează parola</button>
+        </form>
+      </div>
+      <br />
+      <!-- Mesaj de succes -->
+<div class="success-message">
+  <!-- mesajul de succes -->
+</div>
+
+      <!-- Mesaj de eroare -->
+      <div class="error-message">
+        <!-- mesajul de eroare -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const errorMessage = document.querySelector('.error-message');
+    // verifica daca exista un msj de eroare
+    const urlParams = new URLSearchParams(window.location.search);
+    const error = urlParams.get('error');
+
+    if (error) {
+      //afiseaza eroarea in div-ul "error-message"
+      errorMessage.innerText = error;
+    }
+
+  </script>
+</body>
+</html>

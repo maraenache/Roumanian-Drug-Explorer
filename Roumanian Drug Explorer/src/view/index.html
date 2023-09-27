@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="website icon"
+      href="https://live.staticflickr.com/65535/52986222269_59904cf210_n.jpg"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Romanian Drugs Watcher!</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,700&family=Poppins:wght@100;200;400;500;600;800;900&family=Roboto+Slab:wght@100;200;300;400;600;900&family=Tilt+Neon&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <section class="header">
+      <nav>
+        <a href="http://localhost:3000/pag_princ">
+          <img id="logo" src="/images/pill_logo-removebg-preview.png" />
+        </a>
+        <div class="nav-links" id="nav-links">
+          <i class="fa fa-close" onclick="hideMenu()"></i>
+
+          <ul>
+            <li>
+              <a
+                style="font-weight: bold"
+                href="http://localhost:3000/pag_princ"
+                >HOME</a
+              >
+            </li>
+            <li>
+              <a>
+                <label for="chart-select">STATISTICI</label>
+                <select id="chart-select">
+                  <option></option>
+
+                  <option value="http://localhost:3000/ptPie">
+                    Pie charts
+                  </option>
+                  <option value="http://localhost:3000/barCharts">Bar charts</option>
+                  <option value="http://localhost:3000/ptMulti">
+                    Multiple bar charts
+                  </option>
+                  <option value="http://localhost:3000/pt2022">
+                    2022 charts
+                  </option>
+                </select>
+              </a>
+            </li>
+
+            <li class="current">
+              <a href="http://localhost:3000/contact">CONTACT</a>
+            </li>
+            <li class="current">
+              <a href="http://localhost:3000/login">LOGOUT</a>
+            </li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+
+      <div class="text-box">
+        <h1>Romanian Drug Watcher</h1>
+        <p>
+          <br />
+          <strong>Bine ați venit pe site-ul nostru!</strong>
+          <br />
+          <br />
+          Acesta este un loc unde veți găsi informații și cifre actualizate
+          despre consumul și traficul de droguri din România.
+          <br />
+        </p>
+        <a href="#about" class="hero-btn">AFLA MAI MULTE</a>
+      </div>
+    </section>
+
+    <!------------------sectiune 2 informatii utile------------------->
+    <section class="course" id="about">
+      <h1>INFORMATII UTILE</h1>
+      <p>
+        <strong
+          >DROGURILE NU SUNT DOAR O PROBLEMĂ PERSONALĂ, CI AFECTEAZĂ ÎNTREAGA
+          COMUNITATE</strong
+        ><br />
+        Prin intermediul datelor și analizelor prezentate pe acest site, ne
+        propunem să oferim o perspectivă cât mai obiectivă și informativă cu
+        privire la impactul negativ al drogurilor. Aceste informații sunt
+        destinate să sprijine deciziile informate și să promoveze un stil de
+        viață sănătos și fără droguri. Informațiile sunt prezentate sub formă de
+        articole, interviuri, videoclipuri și alte resurse multimedia. În plus,
+        sunt oferite linkuri către alte resurse și programe disponibile în
+        România pentru prevenirea și tratamentul dependenței de droguri.
+      </p>
+
+      <div class="row">
+        <div class="course-col">
+          <a
+            style="text-decoration: none"
+            href="https://data.gov.ro/dataset/date-statistice-privind-consumul-de-droguri-in-romania-2019"
+          >
+            <h3>2019</h3>
+          </a>
+          <p>
+            Statisticile guvernamentale oficiale despre situatia drogurilor in
+            Romania din 2019.
+          </p>
+        </div>
+        <div class="course-col">
+          <a
+            style="text-decoration: none"
+            href="https://data.gov.ro/dataset/date-statistice-privind-consumul-de-droguri-in-romania-2020"
+          >
+            <h3>2020</h3>
+          </a>
+          <p>
+            Statisticile guvernamentale oficiale despre situatia drogurilor in
+            Romania din 2020.
+          </p>
+        </div>
+        <div class="course-col">
+          <a
+            style="text-decoration: none"
+            href="https://data.gov.ro/dataset/date-statistice-privind-consumul-de-droguri-in-romania-2021"
+          >
+            <h3>2021</h3>
+          </a>
+          <p>
+            Statisticile guvernamentale oficiale despre situatia drogurilor in
+            Romania din 2021.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!------------------sectiune 3 despre droguri ------------------->
+    <section class="descriere">
+      <h1>Ce sunt Drogurile?</h1>
+      <p>
+        Drogurile sunt substanțe care pot avea un impact negativ asupra
+        funcționării organismului uman. Utilizarea drogurilor poate avea efecte
+        negative asupra sănătății fizice și psihice. Unul dintre cele mai grave
+        efecte este dependența, care poate duce la nevoia constantă de a consuma
+        droguri pentru a funcționa normal și poate duce la probleme de sănătate
+        și sociale severe. Alte efecte negative ale drogurilor includ afectarea
+        sistemului nervos central, tulburari de somn, anxietate, paranoia,
+        depresie, probleme de memorie și cogniție, pierderea controlului asupra
+        impulsurilor, creșterea riscului de accidente și comportamente violente,
+        precum și probleme de sănătate fizică, cum ar fi boli de plămâni, boli
+        de inimă, boli hepatice și multe altele.<br /><strong>
+          Afla mai multe detalii in acest
+          <a
+            style="text-decoration: none"
+            href="https://www.isj.tm.edu.ro/public/data_files/specializari/fisier-342.pdf"
+            >ghid antidrog</a
+          >.</strong
+        >
+      </p>
+    </section>
+
+    <!------------------sectiune 3 informatii,  suplimentare cele 6------------------->
+
+    <section class="articles">
+      <h1>Informatii suplimentare cu privire la droguri</h1>
+      <p>
+        Informațiile urmatoare includ articole, interviuri, videoclipuri și alte
+        resurse multimedia.
+        <br />În plus, sunt oferite linkuri către alte resurse și programe
+        disponibile în România pentru prevenirea și tratamentul dependenței de
+        droguri.
+      </p>
+      <div class="row">
+        <div class="articles-col">
+          <a
+            style="text-decoration: none"
+            href="https://www.emcdda.europa.eu/system/files/publications/14644/20222419_TDAT22001RON_PDF.pdf"
+          >
+            <img src="/images/art1.jpg" alt="" />
+
+            <h3>Raport European</h3>
+          </a>
+          <p>
+            În raportul european privind tendințele și consumul de droguri se
+            evidențiază importanța implementării unor politici eficiente de
+            prevenire și tratament.
+          </p>
+        </div>
+        <div class="articles-col">
+          <a
+            style="text-decoration: none"
+            href="https://sgg.gov.ro/1/wp-content/uploads/2022/02/RAPORT-1.pdf"
+          >
+            <img src="/images/art2.jpg" alt="" />
+            <h3>Raport National</h3>
+          </a>
+          <p>
+            Raportul Național privind tendințele drogurilor analizează situația
+            actuală a consumului de droguri în țară și ofera informații
+            actualizate cu privire la evoluția pieței drogurilor.
+          </p>
+        </div>
+        <div class="articles-col">
+          <a
+            style="text-decoration: none"
+            href="https://www.spital-lupeni.ro/images/Efectele-consumului-de-droguri.pdf"
+          >
+            <img src="/images/art3.jpg" alt="" />
+            <h3>Efectele Drogurilor</h3>
+          </a>
+          <p>
+            Consumul de droguri poate avea efecte grave asupra sănătății fizice
+            și psihice. Efectele imediate: modificări ale stării de conștiență,
+            anxietate, paranoia, halucinații pierderea cunoștinței etc.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="articles-col">
+          <a
+            style="text-decoration: none"
+            href="https://stirileprotv.ro/romania-te-iubesc/povestile-lui-alex-si-lucian-doi-tineri-care-au-cazut-in-patima-drogurilor-iti-vine-printr-un-borcan-de-nutella-sigilat.html"
+          >
+            <img src="/images/art4.jpg" alt="" />
+            <h3>Cazuri impresionante</h3>
+          </a>
+          <p>
+            Cazurile și interviurile cu oameni închiși care au avut probleme cu
+            drogurile demonstrează impactul negativ al drogurilor asupra vieții
+            sociale și personale.
+          </p>
+        </div>
+        <div class="articles-col">
+          <a
+            style="text-decoration: none"
+            href="https://www.dw.com/ro/consumul-de-droguri-%C8%99i-meandrele-legisla%C8%9Biei-%C3%AEn-domeniu/a-61938811"
+          >
+            <img src="/images/art5.jpg" alt="" />
+
+            <h3>Legislatia in Romania</h3>
+          </a>
+          <p>
+            Legislația referitoare la droguri în România: informații despre legi
+            și reguli legate de droguri, inclusiv sancțiuni pentru posesia,
+            traficul și consumul de droguri.
+          </p>
+        </div>
+        <div class="articles-col">
+          <a
+            style="text-decoration: none"
+            href="https://medtim-international.ro/?gclid=Cj0KCQjw4s-kBhDqARIsAN-ipH021QDJcCK-fwtx4VJ6F24KoXgYPm9eSNA5IfNZdvilv82lYhCk5mMaAr8vEALw_wcB"
+          >
+            <img src="/images/art6.jpg" alt="" />
+            <h3>Prevenire si Tratament</h3>
+          </a>
+          <p>
+            Informații despre programe de prevenire și tratament a dependentei
+            de droguri disponibile în România, inclusiv terapie, medicamente și
+            alte intervenții.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--call to action-------------->
+    <section class="cta">
+      <h4>
+        <blockquote>
+          "Drogurile sunt o pierdere de timp. Îți distrug memoria și respectul
+          de sine și tot ceea ce vine împreună cu stima ta de sine."
+        </blockquote>
+        <br />
+        -Kurt Cobain
+      </h4>
+      <a href="/doc" class="hero-btn">Documentatie Proiect</a>
+    </section>
+
+    <script src="js/menu.js"></script>
+    <script src="js/pagPrinc.js"></script>
+  </body>
+</html>

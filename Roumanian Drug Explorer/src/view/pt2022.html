@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/diagr_style.css" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,700&family=Poppins:wght@100;200;400;500;600;800;900&family=Roboto+Slab:wght@100;200;300;400;600;900&family=Tilt+Neon&display=swap"
+    rel="stylesheet"
+  />
+    <title>2022 Charts</title>
+    <link rel="website icon" href="images/pill_logo-removebg-preview.png" />
+    <!-- Asta e logoul din partea de sus sus de tot, ala cu pastila -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link
+      rel="stylesheet"
+      href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <a href="http://localhost:3000/pag_princ">
+        <img id="logo" src="/images/pill_logo-removebg-preview.png" />
+      </a>
+      <div class="nav-links" id="nav-links">
+        <i class="fa fa-close" onclick="hideMenu()"></i>
+
+        <ul>
+          <li>
+            <a class="active" href="http://localhost:3000/pag_princ">HOME</a>
+          </li>
+          <li>
+            <a style="font-weight: bold">
+              <label for="chart-select">STATISTICI</label>
+              <select id="chart-select">
+                <option></option>
+                <option value="http://localhost:3000/ptPie">Pie charts</option>
+                <option value="http://localhost:3000/barCharts">Bar charts</option>
+                <option value="http://localhost:3000/ptMulti">
+                  Multiple bar charts
+                </option>
+                <option value="http://localhost:3000/pt2022">2022 charts</option>
+              </select>
+            </a>
+          </li>
+
+          <li class="current">
+            <a href="http://localhost:3000/contact">CONTACT</a>
+          </li>
+          <li class="current">
+            <a href="http://localhost:3000/login">LOGOUT</a>
+          </li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <div style="text-align: center;">
+      <h1 style="margin: 0 auto;">REPREZENTĂRI VIZUALE<br> 2022 Line Charts</h1> </div>
+
+
+
+    <div class="chart-container">
+      <canvas id="campaniiNationaleChart"></canvas>
+    </div>
+    <div>
+      <button id="exportButtonPNG1">Export PNG</button>
+      <button id="exportButtonSVG1">Export SVG</button>
+    </div>
+
+    <div class="selector">
+        <div>
+          <p>Vezi statistici în funcție de:</p> 
+          <label for="public-select">Public tinta:</label>
+          <select id="public-select"></select>
+        </div>
+      </div>
+    <div class="chart-container">
+      <canvas id="activitatiPrevenireChart"></canvas>
+    </div>
+    <div>
+      <button id="exportButtonPNG2">Export PNG</button>
+      <button id="exportButtonSVG2">Export SVG</button> 
+    </div>
+
+
+    <div class="chart-container">
+      <canvas id="proiecteNationaleChart"></canvas>
+    </div>
+    <div>
+      <button id="exportButtonPNG3">Export PNG</button>
+      <button id="exportButtonSVG3">Export SVG</button>
+    </div>
+    <div class="selector">
+     
+      <p>Vezi statistici în funcție de:</p> 
+       <div>
+         <label for="drug-select2">Drog:</label>
+         <select id="drug-select2"></select>
+       </div>
+        
+     </div>
+ 
+
+    <div class="chart-container">
+      <canvas id="confiscariChart"></canvas>
+    </div>
+    <div>
+      <button id="exportButtonPNG4">Export PNG</button>
+      <button id="exportButtonSVG4">Export SVG</button>
+    </div>
+
+    <div><button id="exportButtonCSV">Export CSV</button></div>
+    <div><button id="exportButtonJSON">Export JSON</button></div>
+    
+    <script src="js/pt2022.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/pagPrinc.js"></script>
+  </body> 
+</html>

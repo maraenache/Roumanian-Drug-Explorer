@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <link rel="website icon" href="images/pill_logo-removebg-preview.png" />
+  <!-- Asta e logoul din partea de sus sus de tot, ala cu pastila -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Documentatie</title>
+    <link rel="stylesheet" href="css/doccss.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="banner">
+        <h1>Documentatie RoDX (Romanian Drug Explorer)</h1>
+      </div>
+    </header>
+    <div role="contentinfo">
+      <ol role="directory">
+        <li>
+          <a href="#abstract"><span>1. </span>Abstract</a>
+        </li>
+        <li>
+          <a href="#introduction"><span>2. </span>Introducere</a>
+        </li>
+        <li>
+          <a href="#structure"><span>3. </span>Structura</a>
+          <ol role="directory">
+            <li>
+              <a href="#Root"><span> 3.1 </span>Elementul head</a>
+            </li>
+            <li>
+              <a href="#article"><span>3.2 </span>Articole si sectiuni</a>
+            </li>
+            <li>
+              <a href="#hunk"><span>3.3 </span>Elemente</a>
+              <ol role="directory">
+                <li>
+                  <a href="#inline"><span>3.3.1 </span>Elemente Inline</a>
+                </li>
+              </ol>
+              <ol role="directory"></ol>
+            </li>
+            <li>
+              <a href="#atribute"><span>3.4 </span>Atribute utilizate</a>
+            </li>
+            <li>
+              <a href="#clase"><span>3.5 </span>Clase utilizate</a>
+            </li>
+          </ol>
+        </li>
+
+        <li>
+          <a href="#tehnologii"><span>4. </span>Tehnologii utilizate</a>
+        </li>
+        <li>
+          <a href="#ghid"><span>5. </span>Ghid de utilizare</a>
+        </li>
+        <li>
+          <a href="#diagrama"><span>6. </span>Diagrama aplicatiei</a>
+        </li>
+        <li>
+          <a href="#bibliografie"><span>7. </span>Bibliografie</a>
+        </li>
+      </ol>
+    </div>
+    <div role="contentinfo">
+      <dl>
+        <dt>Autori</dt>
+        <dd>
+          Mihai Bianca-Nicoleta <br />
+          Enache Mara-Georgiana <br />
+          Sandu Smaranda
+        </dd>
+      </dl>
+    </div>
+
+
+
+
+
+
+
+    <section id="abstract" role="doc-introduction">
+      <!-- review? -->
+      <h2>Abstract</h2>
+      <p>
+        RoDX (Romanian Drug Explorer) este un proiect ce dezvoltă un instrument web pentru analiza și vizualizarea consumului de droguri în România în ultimii minim 3 ani. Se colectează date statistice din diferite surse, incluzând infracțiunile și confiscările de droguri, urgențele medicale și campaniile de prevenire. Instrumentul oferă o experiență intuitivă de navigare și căutare a informațiilor, cu actualizări frecvente pentru a asigura datele cele mai recente și precise. Scopul este să furnizeze un instrument esențial de informare și cercetare în domeniul drogurilor, atât pentru publicul larg, cât și pentru specialiști.
+      </p>
+      </ul>
+    </section>
+    <section id="introduction" role="doc-introduction">
+      <!-- review? -->
+      <h2>Introducere</h2>
+      <p>
+        Proiectul RoDX (Romanian Drug Explorer) va folosi datele statistice
+        privitoare la situația drogurilor în România pentru a crea un instrument
+        web de analiză și vizualizare a consumului de droguri în ultimii 3 ani
+        (sau mai mulți, în funcție de datele disponibile).
+      </p>
+      <p>
+        Instrumentul va analiza datele dintr-o varietate de surse, inclusiv date
+        privind infracțiunile și confiscările de droguri, urgențele medicale și
+        campaniile de prevenire a consumului. În plus, site-ul va fi conceput
+        pentru a oferi utilizatorilor o experiență ușoară și intuitivă de
+        navigare și căutare a informațiilor. <br />
+        Pe lângă acestea, site-ul va fi menținut și actualizat frecvent pentru a
+        asigura că datele și informațiile prezentate sunt întotdeauna cele mai
+        recente și precise. În acest fel, site-ul va oferi utilizatorilor un
+        instrument esențial de informare și de cercetare în domeniul drogurilor,
+        atât pentru publicul larg, cât și pentru specialiști din domeniu.
+        Site-ul poate ajuta publicul larg să înțeleagă riscurile asociate
+        consumului de droguri și să caute ajutor în cazul în care au probleme
+        legate de droguri.
+      </p>
+      <p>Obiectivele noastre:</p>
+      <ul>
+        <li>
+          Prezentarea datelor statistice privind consumul de droguri în România
+          în ultimii minim 3 ani, într-un format ușor de înțeles și accesibil
+          pentru toți utilizatorii.
+        </li>
+        <li>
+          Analiza și vizualizarea datelor statistice pentru a evidenția
+          tendințele și modelele în consumul de droguri, în corelație cu
+          infracțiunile și confiscările efectuate, plus urgentele medicale și
+          campaniile de prevenire a consumului de stupefiante.
+        </li>
+        <li>
+          Colectarea și integrarea datelor statistice din surse diferite,
+          într-un format standardizat și ușor de utilizat.
+        </li>
+        <li>
+          Crearea unui set complex de instrumente de analiză și vizualizare,
+          inclusiv grafice, diagrame și hărți interactive, care să permită
+          utilizatorilor să exploreze datele într-un mod interactiv și intuitiv.
+        </li>
+      </ul>
+    </section>
+    <section id="structure">
+      <!-- review? -->
+      <h2>Structura</h2>
+      <p>
+        Pe acest site veți găsi o structură intuitivă și logică, împărțită în
+        cinci pagini principale, fiecare oferind un tip diferit de conținut și
+        funcționalitate. Pagina principală vă va oferi o perspectivă globală
+        asupra acestui proiect, iar pagina cu statistici vă va permite să
+        analizați detaliat datele privind consumul de droguri în România în
+        ultimii 3 ani. De asemenea, o pagină cu reprezentări vizuale vă va oferi
+        o gamă largă de grafice și diagrame interactive, pentru a vă ajuta să
+        vizualizați datele într-un mod clar și accesibil. Pentru a vă ajuta să
+        intrați în contact cu autorii, am inclus o pagină dedicată datelor de
+        contact. În plus, veți găsi și o pagină specială, cu statistici
+        vizualizate pe harta României pentru a fi mai ușor să vedeți distribuția
+        geografică a consumului de droguri în țară. Toate aceste pagini au o
+        structură armonioasă și sunt ușor de navigat, pentru a vă ajuta să
+        accesați rapid și eficient informațiile de care aveți nevoie.
+      </p>
+    </section>
+    <section id="Root">
+      <h3>Elementul head</h3>
+      <p>Sectiunea head contine:</p>
+
+      <ul>
+        <li>
+          O indicatie ca documentul foloseste encoding-ul UTF-8, care suporta
+          caracterele din mai multe limbi si scrieri.
+        </li>
+        <li>
+          Titlul paginii, care apare in partea de sus a ferestrei de navigare a
+          browser-ului.
+        </li>
+        <li>
+          Pictograma care apare in bara de adrese sau in lista de file a
+          browser-ului.
+        </li>
+      </ul>
+      <pre><code>
+           &lt;head>
+          &lt;title>Pagina Principala&lt;/title>
+          &lt;link rel="website icon" href="../static/images/pill_logo-removebg-preview.png" />
+          &lt;meta charset="utf-8" />
+          &lt;meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+          &lt;link rel="stylesheet" href="css/main.css" />
+          &lt;/head>
+        </code></pre>
+    </section>
+    <section id="article">
+      <!-- review? -->
+      <h3>Articole si sectiuni</h3>
+      <p>
+        Tag-ul &lt;article> este utilizat pentru a defini o secțiune de conținut
+        independentă, care poate fi utilizată în mod repetat pe site-ul web.
+        <br />
+        Un exemplu de utilizare al acestui tag in cadrul site-ului nostru este:
+      </p>
+
+      <pre>
+                    <code>
+                      &lt;article id="main">
+                      &lt;header class="special container"> <!-- special pt ca textul sa fie centrat-->
+                      &lt;span class="solid">&lt;/span> <!--solid- pt bolt textu-->
+                      &lt;h2>
+                            Drogurile nu sunt doar o problemă personală, ci afectează întreaga
+                            comunitate.
+                            &lt;/h2>
+                            &lt;p>
+                            ........
+                    </code>
+                  </pre>
+
+      <p>
+        Tag-ul &lt;section> este utilizat pentru a împărți conținutul paginii în
+        secțiuni mai mici și mai ușor de gestionat, ceea ce face mai ușoară
+        organizarea și structurarea informațiilor și face paginile mai ușor de
+        înțeles și de navigat pentru utilizatori. Un exemplu de utilizare al
+        acestui tag in cadrul site-ului nostru este:
+      </p>
+
+      <pre>
+                    <code>
+                      &lt;section class="descriere">
+                      &lt;h1>Ce sunt Drogurile?&lt;/h1>
+                      &lt;p>
+                        Drogurile sunt substanțe care pot avea un impact negativ asupra
+                        funcționării organismului uman. Utilizarea drogurilor poate avea efecte
+                        negative asupra sănătății fizice și psihice. Unul dintre cele mai grave
+                  
+                      ...... &lt;/section>
+                    </code>
+                  </pre>
+    </section>
+    <section id="hunk">
+      <!-- review? -->
+      <h3>Elemente</h3>
+      <p>Printre tag-urile utilizate de noi se regasesc:</p>
+      <p></p>
+      <ul>
+        <li>
+          <code> &lt;li> </code> in general, este utilizat în cadrul unei liste
+          ordonate (&lt;ol>) sau a unei liste neordonate (&lt;ul>) pentru a
+          defini fiecare element individual din lista.
+        </li>
+        <li>
+          <code> &lt;blockquote></code> este folosit pentru a marca o secțiune
+          de text citat din altă sursă.
+        </li>
+        <li>
+          <code> &lt;p> </code> este folosit pentru a defini un paragraf de
+          text. Acesta marchează începutul și sfârșitul unui bloc de text care
+          formează un paragraf.
+        </li>
+      </ul>
+    </section>
+    <section id="inline">
+      <!-- review? -->
+      <h3>Elemente Inline</h3>
+      <p></p>
+      <ul>
+        <li>
+          <code>&lt;a></code> este folosit pentru a crea un hyperlink către o
+          altă pagină web sau către o altă secțiune din aceeași pagină.Ppermite
+          utilizatorilor să facă clic pe un link și să ajungă la o altă pagină
+          web sau să navigheze la o altă secțiune a aceleiași pagini.
+          <p>Un exemplu din codul nostru unde este utilizat acest tag este:</p>
+          <pre><code> &lt;a href="https://data.gov.ro/dataset/date-statistice-privind-consumul-de-droguri-in-romania-2020"
+              class="button small">Afla mai multe&lt;/a></code></pre>
+        </li>
+        <li>
+          <code>&lt;img></code> este un tag de auto-închidere și nu necesită un
+          tag de închidere separat. În general, &lt;img> are un atribut src care
+          specifică locația imaginii și un alt atribut opțional alt care descrie
+          conținutul imaginii.
+          <p>Un exemplu din codul nostru unde este utilizat acest tag este:</p>
+          <pre><code> &lt;img src="../static/images/art4.jpg" alt="" /></code></pre>
+        </li>
+    
+
+
+        
+      </ul>
+    </section>
+    <section id="atribute">
+      <h3>Atribute utilizate</h3>
+      <ul>
+        <li>
+          <code>atributul rel</code> este folosit pentru a specifica relația
+          dintre pagina curentă și resursa legată de ea. Acesta se folosește de
+          obicei în legătură cu elementul "a", dar poate fi folosit și cu alte
+          elemente, cum ar fi "link" sau "area".
+        </li>
+      </ul>
+      <p>
+        Exemple din codul nostru unde este utilizat acest atribut este:<br />
+        <code> &lt;link rel="stylesheet" href="css/main.css" /> </code>
+      </p>
+      <p>
+        <code>
+          &lt;link rel="website icon"
+          href="../static/images/pill_logo-removebg-preview.png" />
+        </code>
+      </p>
+      <ul>
+        <li>
+          <code>atributul class </code> este utilizat pentru a specifica o clasă
+          sau o serie de clase CSS asociate cu un element HTML. Atributul
+          <code>id</code> este utilizat pentru a identifica un element specific
+          pe o pagină web. Fiecare element poate avea un singur atribut id, care
+          trebuie să fie unic pe întreaga pagină.
+        </li>
+      </ul>
+      <p>
+        Exemple din codul nostru unde sunt utilizate aceste atribute sunt:<br />
+        <code> &lt;header id="header" class="formenu"> </code><br />
+        <code> &lt;a href="#main" class="button fit">Afla mai multe&lt;/a></code
+        ><br />
+        <code> &lt;section class="wrapper style2 container special-alt"> </code>
+        <br />
+        <code> &lt;section id="more" class="wrapper container special"> </code>
+      </p>
+    </section>
+    <section id="clase">
+      <!-- review? -->
+      <h3>Clase utilizate</h3>
+      <p>
+        Atributul "class" în CSS este utilizat pentru a defini o clasă de
+        stiluri care poate fi aplicată la unul sau mai multe elemente HTML.
+        <br />
+        Exemple de utilizare a acestui atribut: <br />
+      </p>
+
+      <ul>
+        <li>
+          Această clasă CSS, ".insta-icon", este destinată unui element HTML cu
+          clasa "insta-icon" care se află în interiorul unui element HTML
+          "header". <br />
+          Acest set de reguli CSS va face următoarele pentru elementul
+          "insta-icon":
+        </li>
+
+        <li>
+          Va seta lățimea maximă a elementului la 20% din lățimea elementului
+          părinte.
+        </li>
+        <li>
+          Va face înălțimea elementului "insta-icon" ajustabilă astfel încât
+          imaginea să nu se distorsioneze atunci când se redimensionează pagina.
+        </li>
+        <li>
+          Va seta elementul "insta-icon" să fie afișat ca un element bloc
+          (display: block).
+        </li>
+        <li>
+          Va seta margin-left la 50%, ceea ce va muta elementul spre dreapta,
+          jumătate din lățimea elementului părinte.
+        </li>
+      </ul>
+      <pre>
+            <code>
+                header .insta-icon {
+                max-width: 20%;
+                height: auto;
+                margin-left: 50%;
+                display: block;
+            }
+           </code></pre>
+      <ul>
+        <li>
+          Aceasta clasa definește stilurile pentru un element HTML care
+          reprezinta un buton
+        </li>
+      </ul>
+      <pre>
+            <code>
+              .button {
+                background: none;
+                border: solid 1px;
+                border-radius: 0;
+                color: inherit;
+                cursor: pointer;
+                display: inline-block;
+                font-size: 0.8em;
+                font-weight: 900;
+                letter-spacing: 2px;
+                min-width: 18em;
+                padding: 0 0.75em;
+                line-height: 3.75em;
+                text-align: center;
+                text-decoration: none;
+                text-transform: uppercase;
+              }
+            </code>
+           </pre>
+    </section>
+    <section id="tehnologii">
+      <h3>Tehnologii utilizate</h3>
+      <p>
+        HTML este responsabil pentru structurarea conținutului site-ului,
+        ajutând la definirea elementelor precum titlurile, textul, imagini sau
+        hyperlink-urile.
+      </p>
+      <p>
+        În ceea ce privește CSS, acesta este un limbaj de stilizare care ajută
+        la definirea stilului vizual al paginilor web, cum ar fi culorile,
+        fonturile, dimensiunile și altele.
+  </p>
+
+      <p>
+
+Iar, JavaScript este un limbaj de programare care permite interactivitatea și funcționalitatea dinamică în paginile web. Am utilizat JavaScript pentru a adăuga comportament interactiv, validare a formularului, manipularea DOM-ului (Modelul Obiectului Document), gestionarea evenimentelor și multe alte funcționalități.
+</p>
+<p>
+Node.js este un mediu de execuție JavaScript pe partea serverului, care ne permite să rulăm cod JavaScript în afara browserului. Am utilizat Node.js pentru a construi și rula serverul nostru, pentru a gestiona cereri HTTP, pentru a accesa baza de date și pentru a efectua alte operații server-side. 
+
+      </p>
+    </section>
+    <section id="ghid">
+      <h3>Ghid de utilizare</h3>
+
+
+      <p>Accesarea paginii de login:</p>
+      <ol>
+        <li>Din pagina login, se observa un formular, unde puteți introduce informațiile necesare pentru autentificare.
+        </li>
+        <li>Pe pagina de login, va mai fi o optiune "Creează cont nou", in cazul in care esti un utilizator nou pe site.
+        </li>
+        <li>Dacă aveți deja un cont, introduceți datele de autentificare în câmpurile corespunzătoare (adresa de email și parola) și apăsați butonul "Loghează-te".
+        </li>
+        <li>După ce v-ați autentificat cu succes, veți fi redirecționat către pagina principală a aplicației/website-ului.
+        </li>
+        <li>Dacă nu aveți un cont și doriți să creați unul nou, apăsați butonul "Creează cont nou"</li>
+        <li>Veți fi redirecționat către pagina de înregistrare (register), unde va trebui să completați un formular cu informațiile necesare pentru crearea contului.</li>
+        <li> După ce ați completat formularul corect și ați apăsat butonul "Înregistrează-te" sau echivalentul acestuia, veți fi redirecționat către pagina principală a aplicației/website-ului.</li>
+      </ol>
+
+
+      <p>Accesarea paginii de register:</p>
+      <ol>
+        <li>Dupa ce ati apasat pe "Creează cont nou" din pagina login, ati ajuns in pagina register.
+        </li>
+        <li> Completați formularul de înregistrare cu informațiile necesare.
+        </li>
+        <li>Apăsați butonul "Înregistrează-te".
+        </li>
+        <li>Contul dvs. va fi creat și veți fi redirecționat către pagina de login.
+        </li>
+        <li>Utilizați adresa de email și parola create pentru a vă loga.
+        </li>
+        </li>
+        <li>După logare, veți fi redirecționat către pagina principală.</li>
+      </ol>
+
+
+      <p>Accesarea paginii principale:</p>
+
+      <ol>
+        <li> Accesați pagina principală a aplicației/webiste-ului.</li>
+      
+          Pe pagina principala veți găsi scurtături către diferite articole și
+          un meniu care conține link-uri către celelalte pagini.
+        </li>
+        <li>
+          Dacă doriți să aflați mai multe despre subiectele prezentate pe pagina
+          principală, dați click pe scurtăturile corespunzătoare sau pe
+          link-urile din meniu.
+        </li>
+        <li>
+         Din bara de navigație de sus, aveți opțiunea de a selecta pagina de statistici in functie de tipul de vizualizare a statisticilor.
+         Acolo veți găsi diverse tipuri de diagrame, cum ar fi piecharts, clusteres și multiplebars, care prezintă informațiile într-un mod vizual atractiv. Aceste diagrame se referă la statisticile din anul 2019, 2020, 2021.Iar pentru anul 2022, sunt realizate Line Charts pentru statistici.
+        </li>
+        <li>
+          De asemenea, puteți accesa și pagina de contact, unde puteți găsi informații despre cum să ne contactați pentru întrebări, sugestii sau orice altceva aveți nevoie.
+        </li>
+      </li>
+      </ol>
+    
+      </p>
+      
+      <p>Accesarea paginii "Statistici": Pie Charts</p>
+
+<ol>
+  <li>
+    Pentru a accesa pagina "Vezi statistici", dați clic pe link-ul corespunzător din meniu.
+  </li>
+  <li>
+    Pe această pagină puteți vedea diagramele sub forma de pie charts:
+    <ul>
+      <li> Admitere la tratament in functie de drogul princupal de consum si sex</li>
+      <li> Admitere la tratament in functie de drogul princupal de consum si varsta</li>
+      <li> Admitere la tratament in functie de drogul princupal de consum si regimul de tratment</li>
+      <li> Admitere la tratament in functie de drogul princupal de consum si situatia locativa</li>
+      <li> Admitere la tratament in functie de drogul princupal de consum si situatia economica</li>
+      <li> Admitere la tratament in functie de drogul princupal de consum si studii</li>
+      <li> Admitere la tratament in functie de drogul princupal de consum si tipul locuintei</li>
+      <li> Admitere la tratament in functie de drogul princupal de consum si tipul de referire</li>
+    </ul>
+  </li>
+  <li>
+    Pentru a vizualiza datele statistice, dați clic pe butoanele corespunzătoare.
+  </li>
+  <li>Exista posibilitatea de a exporta in format PNG, si SVG charturile iar datele in format JSON si CSV.</li>
+</ol>
+</p>
+
+
+<p>Accesarea paginii "Statistici": Bars Charts</p>
+
+<ol>
+  <li>
+    Pentru a accesa pagina "Vezi statistici", dați clic pe link-ul corespunzător din meniu.
+  </li>
+  <li>
+    Pe această pagină puteți vedea diagramele sub forma de bars charts:
+    <ul>
+      <li> Distributia cazurilor de urgente medicale datorate consumului de droguri , in functie de tipul drogului si sex</li>
+      <li> Distributia cazurilor de urgente medicale datorate consumului de droguri , in functie de tipul drogului si varsta</li>
+      <li> Distributia cazurilor de urgente medicale datorate consumului de droguri , in functie de tipul drogului si calea de administrare</li>
+      <li> Distributia cazurilor de urgente medicale datorate consumului de droguri , in functie de tipul drogului si modelul de consum</li>
+      <li> Distributia cazurilor de urgente medicale datorate consumului de droguri , in functie de tipul drogului si modelul de diagnosticul de urgenta</li>
+    </ul>
+  </li>
+  <li>
+    Pentru a vizualiza datele statistice, dați clic pe butoanele corespunzătoare.
+  </li>
+  <li>Exista posibilitatea de a exporta in format PNG, si SVG charturile iar datele in format JSON si CSV.</li>
+</ol>
+</p>
+
+<p>Accesarea paginii "Statistici": Multiple Bars Charts</p>
+
+<ol>
+  <li>
+    Pentru a accesa pagina "Vezi statistici", dați clic pe link-ul corespunzător din meniu.
+  </li>
+  <li>
+    Pe această pagină puteți vedea diagramele sub forma de multiple bars/clustered charts:
+    <ul>
+      <li> Boli infectioase asociate consumului de droguri injectabile in functie de gen</li>
+      <li> Boli infectioase asociate consumului de droguri injectabile in functie de varsta</li>
+      <li> Boli infectioase asociate consumului de droguri injectabile in functie de timpul trecut de la prima injectare(ani)</li>
+      <li> Boli infectioase asociate consumului de droguri injectabile in functie de drogul principal de consum</li>
+      <li> Boli infectioase asociate consumului de droguri injectabile in functie de tipul admiterii</li>
+      </ul>
+  </li>
+  <li>
+    Pentru a vizualiza datele statistice, dați clic pe butoanele corespunzătoare.
+  </li>
+  <li>Exista posibilitatea de a exporta in format PNG, si SVG charturile iar datele in format JSON si CSV.</li>
+</ol>
+</p>
+
+<p>Accesarea paginii "Statistici": 2022</p>
+
+<ol>
+  
+  <li>
+    Pe această pagină puteți vedea diagramele sub forma de line charts:
+    <ul>
+      <li> Campanii nationale din 2022</li>
+      <li> Activitati de prevenire a consumului de droguri</li>
+      <li> Proiecte nationale in functie de publicul tinta</li>
+      <li> Confiscari in functie de drog</li>
+      </ul>
+  </li>
+  <li>
+    Pentru a vizualiza datele statistice, dați clic pe butoanele corespunzătoare.
+  </li>
+  <li>Exista posibilitatea de a exporta in format PNG, si SVG charturile iar datele in format JSON si CSV.</li>
+</ol>
+</p>
+
+
+      <p>Accesarea paginii "Contact":</p>
+
+      <ol>
+        <li>
+          Pentru a accesa pagina "Contact", dați click pe link-ul corespunzător
+          din meniu.
+        </li>
+        <li>
+          Pe această pagină veți găsi informații de contact pentru creatorii
+          site-ului.
+        </li>
+      </ol>
+
+      
+    </section>
+    <section id="diagrama">
+      <h3>Diagrama aplicatiei</h3>
+      <img
+        alt=""
+        src="images/diagrama.png"
+        style="height: 50%; width: 90%"
+      />
+      <h3>Diagrama aplicatiei</h3>
+      <img
+        alt=""
+        src="images/C4_TW.png"
+        style="height: 50%; width: 90%"
+      />
+    </section>
+    <section id="bibliografie">
+      <!-- review? -->
+      <h3>Bibliografie</h3>
+      <p>Site-ul utilizeaza informatii disponibile la urmatoarele adrese:</p>
+
+      <ul>
+        <li>
+          <a
+            href="https://data.gov.ro/dataset/date-statistice-privind-consumul-de-droguri-in-romania-2020"
+            >https://data.gov.ro/dataset/date-statistice-privind-consumul-de-droguri-in-romania-2020
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://data.gov.ro/dataset/date-statistice-privind-consumul-de-droguri-in-romania-2021"
+            >https://data.gov.ro/dataset/date-statistice-privind-consumul-de-droguri-in-romania-2021
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://data.gov.ro/dataset/date-statistice-privind-situatia-drogurilor-in-romania-2022"
+            >https://data.gov.ro/dataset/date-statistice-privind-situatia-drogurilor-in-romania-2022</a
+          >
+        </li>
+        <li>
+          <a href="https://sgg.gov.ro/1/wp-content/uploads/2022/02/RAPORT-1.pdf"
+            >https://sgg.gov.ro/1/wp-content/uploads/2022/02/RAPORT-1.pdf</a
+          >
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>

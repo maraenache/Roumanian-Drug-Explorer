@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Register page</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/stil.css" />
+  </head>
+  <body>
+    <div class="box-form">
+      <div class="left">
+        <div class="overlay">
+          <h1>Bine ați venit!</h1>
+          <p>
+            Cu Romanian Drug Watcher, utilizatorii au acces la un
+             instrument interactiv
+             si informativ care contribuie la o mai buna intelegere a consumului de droguri in Romania si faciliteaza 
+            luarea de masuri eficiente pentru reducerea impactului negativ 
+            al drogurilor asupra societatii.
+          </p>
+        </div>
+      </div>
+
+      <div class="right">
+        <h5>Inregistrare</h5>
+        <p>Ai deja un cont? <a href="http://localhost:3000/login">Autentificare</a></p>
+        <form action="/register" method="POST">
+          <input type="text" name="first_name" placeholder="Prenume" required />
+          <input type="text" name="last_name" placeholder="Nume" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <input
+            type="password"
+            name="password"
+            placeholder="Parolă"
+            required
+          />
+          <input
+            type="text"
+            name="username"
+            placeholder="Nume de utilizator"
+            required
+          />
+          <button type="submit">Inregistrare</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
